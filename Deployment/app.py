@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template,jsonify
+from flask_cors import CORS
 import pickle
 import numpy as np
 
 app = Flask(__name__)
+CORS(app)
 
 model_file = open('model.pkl', 'rb')
 scaler_file = open('scaler.pkl', 'rb')
