@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
 
 model_file = open('model.pkl', 'rb')
 scaler_file = open('scaler.pkl', 'rb')
